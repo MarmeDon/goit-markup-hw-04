@@ -5,6 +5,7 @@
   --alternative-text-color: #ffffff;
   --main-bg-color: #2f303a;
   --secondary-bg-color: #f5f4fa;
+  --icons-color: #AFB1B8;
 }
 
 body {
@@ -93,6 +94,30 @@ address {
   overflow: hidden;
 }
 
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list-link {
+  fill: var(--icons-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.social-list-link:hover,
+.social-list-link:focus {
+background-color: var(--accent-text-color)
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--alternative-text-color);
+}
+
 /* HEADER */
 .header {
   border-bottom: 1px solid #ececec;
@@ -146,6 +171,8 @@ address {
 }
 
 .contact-list-link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -153,18 +180,29 @@ address {
   color: var(--secondary-text-color);
 }
 
+.contact-list-link:hover .contact-icon,
+.contact-list-link:focus .contact-icon,
 .contact-list-link:hover,
 .contact-list-link:focus {
+  fill: var(--accent-text-color);
   color: var(--accent-text-color);
+}
+
+.contact-icon {
+  fill: var(--secondary-text-color);
+  margin-right: 10px;
 }
 
 /* HERO */
 .hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bg.jpg);
+  background-color: #c4c4c4;
+  max-width: 1600px;
+  background-size: cover;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-
-  background-color: var(--main-bg-color);
+  margin: auto;
 }
 
 .hero-title {
@@ -236,6 +274,15 @@ address {
   color: var(--secondary-text-color);
 }
 
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 30px;
+}
+
 /* EXAMPLES */
 .examples-list {
   display: flex;
@@ -275,6 +322,8 @@ address {
 .team-content-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .team-list-name {
@@ -288,6 +337,7 @@ address {
 }
 
 .team-list-position {
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -295,9 +345,54 @@ address {
   text-align: center;
 }
 
+/* CLIETNS */
+
+.clients-list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-list-item {
+  flex-basis: calc((100% - 120px) / 6);
+  margin-left: 30px;
+  margin-top: 30px;
+
+}
+
+.clients-list-link {
+  display: block;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+
+}
+
+.clients-list-icon {
+  fill: var(--icons-color);
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border: 1px solid var(--accent-text-color);
+}
+
+.clients-list-link:hover .clients-list-icon,
+.clients-list-link:focus .clients-list-icon {
+  fill: var(--accent-text-color);
+}
+
+
+
 /* FOOTER */
 
 .footer .container {
+  display: flex;
+  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -336,6 +431,31 @@ address {
 .address-list-link:hover,
 .address-list-link:focus {
   color: var(--accent-text-color);
+}
+.footer-social-media-block {
+  margin-left: 70px;
+}
+.footer-social-links-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--alternative-text-color);
+}
+
+.footer .social-list-item {
+  margin-right: 10px;
+}
+.footer .social-list-link {
+  fill: var(--alternative-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-list-link:hover,
+.footer .social-list-link:focus {
+  background-color: var(--accent-text-color);
 }
 
 /* PORTFOLIO */
@@ -387,6 +507,14 @@ address {
   margin-top: 30px;
   margin-left: 30px;
 }
+
+.portfolio-list-card:hover,
+.portfolio-list-card:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 
 .portfolio-content-wrapper {
   padding: 20px 24px;
